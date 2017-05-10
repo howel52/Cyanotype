@@ -1,21 +1,20 @@
 @font-face {
     font-family: 'iconfont';  /* project id 296478 */
-    src: url('//at.alicdn.com/t/font_25dbwzypdpge3ik9.eot');
-    src: url('//at.alicdn.com/t/font_25dbwzypdpge3ik9.eot?#iefix') format('embedded-opentype'),
-    url('//at.alicdn.com/t/font_25dbwzypdpge3ik9.woff') format('woff'),
-    url('//at.alicdn.com/t/font_25dbwzypdpge3ik9.ttf') format('truetype'),
-    url('//at.alicdn.com/t/font_25dbwzypdpge3ik9.svg#iconfont') format('svg');
+    src: url('//at.alicdn.com/t/font_pyu1l1cf8dqdunmi.eot');
+    src: url('//at.alicdn.com/t/font_pyu1l1cf8dqdunmi.eot?#iefix') format('embedded-opentype'),
+    url('//at.alicdn.com/t/font_pyu1l1cf8dqdunmi.woff') format('woff'),
+    url('//at.alicdn.com/t/font_pyu1l1cf8dqdunmi.ttf') format('truetype'),
+    url('//at.alicdn.com/t/font_pyu1l1cf8dqdunmi.svg#iconfont') format('svg');
 }
 
 * {
-    font-family: "PingFang SC","Microsoft Yahei","Microsoft Sans Serif";
+    font-family: "PingFang SC", "Microsoft Yahei", "Microsoft Sans Serif";
     color: #ffffff;
 }
 
 a {
     text-decoration: none;
 }
-
 
 body {
     background-color: #c93d10;
@@ -57,6 +56,10 @@ body {
     color: #c93d10;
 }
 
+.main-navigation li, button, .main-navigation a {
+    transition: 0.6s background-color, 0.6s color;
+}
+
 button:focus {
     outline: 0;
 }
@@ -79,7 +82,7 @@ button:focus {
     border-top: none;
 }
 
-.site-branding a:hover{
+.site-branding a:hover {
     border-bottom: 2px solid #ffffff;
 }
 
@@ -108,7 +111,7 @@ article h2 {
     font-size: 41px;
 }
 
-article h2:hover,article span:hover{
+article h2:hover, article span:hover {
     border-bottom: 2px solid #ffffff;
 }
 
@@ -121,20 +124,45 @@ article h2:hover,article span:hover{
     background-color: #ffffff;
 }
 
-.nav-link{
+.nav-link {
     height: 64px;
     border: 2px solid #ffffff;
-    border-top:none;
+    border-top: none;
+    text-align: center;
+
 }
 
-.site-footer{
+.site-footer {
     height: 24px;
     padding: 24px;
     border: 2px solid #ffffff;
     border-top: none;
 }
 
-.site-footer-info{
+.site-footer-info {
     display: block;
     text-align: center;
+}
+
+.next-page {
+    font-family: iconfont;
+    font-size: 34px;
+    border: none;
+    border-left: 2px solid #ffffff;
+    background-color: transparent;
+    height: 64px;
+    width: 64px;
+    float: right;
+    cursor: pointer;
+}
+
+.nav-link .page-number {
+    display: inline-block;
+    line-height: 64px;
+    padding:0 8px 0 8px;
+    font-size: 15px;
+}
+
+.dots:after{
+    content: "...";
 }
