@@ -1,10 +1,10 @@
 @font-face {
     font-family: 'iconfont';  /* project id 296478 */
-    src: url('//at.alicdn.com/t/font_pyu1l1cf8dqdunmi.eot');
-    src: url('//at.alicdn.com/t/font_pyu1l1cf8dqdunmi.eot?#iefix') format('embedded-opentype'),
-    url('//at.alicdn.com/t/font_pyu1l1cf8dqdunmi.woff') format('woff'),
-    url('//at.alicdn.com/t/font_pyu1l1cf8dqdunmi.ttf') format('truetype'),
-    url('//at.alicdn.com/t/font_pyu1l1cf8dqdunmi.svg#iconfont') format('svg');
+    src: url('//at.alicdn.com/t/font_xaidpp0itipjsjor.eot');
+    src: url('//at.alicdn.com/t/font_xaidpp0itipjsjor.eot?#iefix') format('embedded-opentype'),
+    url('//at.alicdn.com/t/font_xaidpp0itipjsjor.woff') format('woff'),
+    url('//at.alicdn.com/t/font_xaidpp0itipjsjor.ttf') format('truetype'),
+    url('//at.alicdn.com/t/font_xaidpp0itipjsjor.svg#iconfont') format('svg');
 }
 
 * {
@@ -16,14 +16,24 @@ a {
     text-decoration: none;
 }
 
-body {
+html{
+    height: 100%;
+
+}
+
+body{
     background-color: #c93d10;
+    border:2px solid #ffffff;
 }
 
 .header-top {
     position: relative;
-    border: #ffffff 2px solid;
+    border-bottom: #ffffff 2px solid;
     height: 50px;
+}
+
+.hidden-block{
+    display: none;
 }
 
 .main-navigation {
@@ -51,10 +61,12 @@ body {
     padding: 13px 24px 13px 24px;
 }
 
+
 .main-navigation li:hover, button:hover, .main-navigation a:hover {
     background-color: #ffffff;
     color: #c93d10;
 }
+
 
 .main-navigation li, button, .main-navigation a {
     transition: 0.6s background-color, 0.6s color;
@@ -76,9 +88,10 @@ button:focus {
 }
 
 .site-branding {
+    font-weight: bold;
     padding: 24px;
     font-size: 24px;
-    border: solid #ffffff 2px;
+    border-bottom: solid #ffffff 2px;
     border-top: none;
 }
 
@@ -86,9 +99,10 @@ button:focus {
     border-bottom: 2px solid #ffffff;
 }
 
+
+
 .content {
-    border: 2px #ffffff solid;
-    border-top: none;
+    border-bottom: 2px solid #ffffff;
 }
 
 .entry-title {
@@ -108,7 +122,7 @@ article {
 
 article h2 {
     margin-top: 10px;
-    font-size: 41px;
+    font-size: 4vw;
 }
 
 article h2:hover, article span:hover {
@@ -126,8 +140,7 @@ article h2:hover, article span:hover {
 
 .nav-link {
     height: 64px;
-    border: 2px solid #ffffff;
-    border-top: none;
+    border-bottom: 2px solid #ffffff;
     text-align: center;
 
 }
@@ -135,8 +148,6 @@ article h2:hover, article span:hover {
 .site-footer {
     height: 24px;
     padding: 24px;
-    border: 2px solid #ffffff;
-    border-top: none;
 }
 
 .site-footer-info {
@@ -148,7 +159,7 @@ article h2:hover, article span:hover {
     font-family: iconfont;
     font-size: 34px;
     border: none;
-    border-left: 2px solid #ffffff;
+    /*border-left: 2px solid #ffffff;*/
     background-color: transparent;
     height: 64px;
     width: 64px;
@@ -156,13 +167,105 @@ article h2:hover, article span:hover {
     cursor: pointer;
 }
 
+
+.previous-page {
+    font-family: iconfont;
+    font-size: 34px;
+    border: none;
+    border-right: 2px solid #ffffff;
+    background-color: transparent;
+    height: 64px;
+    width: 64px;
+    float: left;
+    cursor: pointer;
+}
+
 .nav-link .page-number {
     display: inline-block;
     line-height: 64px;
-    padding:0 8px 0 8px;
+    padding: 0 8px 0 8px;
     font-size: 15px;
 }
 
-.dots:after{
+.dots:after {
     content: "...";
+}
+
+.site-info{
+    padding: 0 8% 0 8%;
+    height: auto;
+}
+
+.site-info nav{
+    padding: 7.6% 0 7.6% 0;
+    display: none;
+}
+
+.site-info .secondary{
+    font-size: 15px;
+    padding: 7.6% 0 15.2% 0;
+    margin: 0;
+}
+
+.site-info p{
+    padding: 0;
+    margin: 0 0 24px 0;
+}
+
+
+.site-info ul{
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+.site-info li{
+    padding: 12px 0 12px 0;
+    font-size: 15px;
+}
+
+.site-info h2{
+    margin: 0 0 24px 0;
+}
+
+.site-info hr{
+    border: none;
+    height:2px;
+    background-color: #ffffff;
+}
+
+
+@media screen and (max-width: 43.75em) {
+    .header-top {
+        border-bottom: none;
+        height: 0px;
+    }
+    .main-navigation li{
+        border: none;
+        display: none;
+    }
+    .sidebar-toggle{
+        border-bottom: 2px solid #ffffff;
+    }
+
+    article{
+        width: auto;
+        padding: 7% 8% 7% 8%;
+    }
+
+    article h2{
+        font-size: 5.5vw;
+    }
+
+    .content hr{
+        width: 84%;
+    }
+    
+    .site-info nav{
+        display: block;
+    }
+
+    .site-footer{
+        display: none;
+    }
 }
