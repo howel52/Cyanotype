@@ -159,7 +159,7 @@ article h2:hover, article span:hover {
     font-family: iconfont;
     font-size: 34px;
     border: none;
-    /*border-left: 2px solid #ffffff;*/
+    border-left: 2px solid #ffffff;
     background-color: transparent;
     height: 64px;
     width: 64px;
