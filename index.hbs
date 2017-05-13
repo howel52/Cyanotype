@@ -7,54 +7,9 @@
     <link rel="stylesheet" href="{{asset "css/normalize.css"}}">
     <link rel="stylesheet" href="{{asset "css/main.css"}}">
 </head>
-<style>
-
-</style>
 
 <body>
-<header>
-    <div class="header-top">
-        <nav class="main-navigation">
-            <ul>
-                {{#navigation}}
-                    {{#foreach navigation}}
-                        <li><a href="{{url absolute="true"}}">{{label}}</a></li>
-                    {{/foreach}}
-                {{/navigation}}
-            </ul>
-        </nav>
-        <button class="sidebar-toggle" id="toggle-button">
-            &#xe767;
-        </button>
-    </div>
-    <div class="site-branding">
-        <a href="#">{{@blog.title}}</a>
-    </div>
-</header>
-
-<div class="site-info hidden-block" id="site-info">
-    <nav>
-        <h2>菜单</h2>
-        <hr>
-        <ul>
-            {{#navigation}}
-                {{#foreach navigation}}
-                    <li><a href="{{url absolute="true"}}">{{label}}</a></li>
-                    <hr>
-                {{/foreach}}
-            {{/navigation}}
-        </ul>
-    </nav>
-    <div class="secondary">
-        <p>{{@blog.description}}
-        </p>
-        <p> Lorem ipsum dolor sit amet, consectetur adipisicing elit. A, accusantium eos ex fugiat illum non quaerat
-            quas
-            velit voluptatem voluptatibus. Ad, fugit, rem? Illum inventore placeat quis, quisquam quo rerum.
-        </p>
-    </div>
-
-</div>
+{{navigation}}
 
 {{!--articles post --}}
 <div class="content" id="articles">

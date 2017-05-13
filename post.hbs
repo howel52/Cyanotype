@@ -8,46 +8,7 @@
     <link rel="stylesheet" href="{{asset "css/main.css"}}">
 </head>
 <body>
-<header>
-    <div class="header-top">
-        <nav class="main-navigation">
-            <ul>
-                {{#navigation}}
-                    {{#foreach navigation}}
-                        <li><a href="{{url absolute="true"}}">{{label}}</a></li>
-                    {{/foreach}}
-                {{/navigation}}
-            </ul>
-        </nav>
-        <button class="sidebar-toggle" id="toggle-button">
-            &#xe767;
-        </button>
-    </div>
-    <div class="site-branding">
-        <a href="#">{{@blog.title}}</a>
-    </div>
-</header>
-
-<div class="site-info hidden-block" id="site-info">
-    <nav>
-        <h2>菜单</h2>
-        <hr>
-        <ul>
-            {{#navigation}}
-                {{#foreach @blog.navigation}}
-                    <li><a href="{{url absolute="true"}}">{{label}}</a></li>
-                    <hr>
-                {{/foreach}}
-            {{/navigation}}
-        </ul>
-    </nav>
-    <div class="secondary">
-        <p>
-            嘻嘻 你好～
-        </p>
-    </div>
-</div>
-
+{{navigation}}
 
 {{#post}}
     <div class="main-body" id="main-body">
@@ -68,6 +29,7 @@
         </article>
     </div>
 {{/post}}
+
 </body>
 <script src="{{asset "js/main.js"}}"></script>
 </html>
