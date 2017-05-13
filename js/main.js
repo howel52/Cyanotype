@@ -13,20 +13,29 @@ let toggleClick = function () {
         return true;
     };
 
-    let class_list = document.getElementById("articles").classList;
+    let site_info_dom = document.getElementById("site-info");
+    let footer_dom = document.getElementById("footer");
+    let articles_dom = document.getElementById("articles");
+    let main_body_dom = document.getElementById("main-body");
 
-    if (checkDisply("hidden-block", class_list)) {
-        class_list.add("hidden-block");
-        document.getElementById("footer").classList.add("hidden-block");
-        //
-        document.getElementById("site-info").classList.remove("hidden-block");
+
+    if (checkDisply("hidden-block", site_info_dom.classList)) {
+        site_info_dom.classList.add("hidden-block");
+        if (footer_dom != null)
+            footer_dom.classList.remove("hidden-block");
+        if (articles_dom != null)
+            articles_dom.classList.remove("hidden-block");
+        if (main_body_dom != null)
+            main_body_dom.classList.remove("hidden-block");
     }
     else {
-        class_list.remove("hidden-block");
-        document.getElementById("footer").classList.remove("hidden-block");
-        //
-        document.getElementById("site-info").classList.add("hidden-block");
-
+        site_info_dom.classList.remove("hidden-block");
+        if (footer_dom != null)
+            footer_dom.classList.add("hidden-block");
+        if (articles_dom != null)
+            articles_dom.classList.add("hidden-block");
+        if (main_body_dom != null)
+            main_body_dom.classList.add("hidden-block");
     }
 
 
