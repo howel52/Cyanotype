@@ -16,14 +16,14 @@ a {
     text-decoration: none;
 }
 
-html{
+html {
     height: 100%;
 
 }
 
-body{
+body {
     background-color: #c93d10;
-    border:2px solid #ffffff;
+    border: 2px solid #ffffff;
 }
 
 .header-top {
@@ -32,7 +32,7 @@ body{
     height: 50px;
 }
 
-.hidden-block{
+.hidden-block {
     display: none;
 }
 
@@ -61,12 +61,10 @@ body{
     padding: 13px 24px 13px 24px;
 }
 
-
 .main-navigation li:hover, button:hover, .main-navigation a:hover {
     background-color: #ffffff;
     color: #c93d10;
 }
-
 
 .main-navigation li, button, .main-navigation a {
     transition: 0.6s background-color, 0.6s color;
@@ -98,8 +96,6 @@ button:focus {
 .site-branding a:hover {
     border-bottom: 2px solid #ffffff;
 }
-
-
 
 .content {
     border-bottom: 2px solid #ffffff;
@@ -167,7 +163,6 @@ article h2:hover, article span:hover {
     cursor: pointer;
 }
 
-
 .previous-page {
     font-family: iconfont;
     font-size: 34px;
@@ -191,81 +186,86 @@ article h2:hover, article span:hover {
     content: "...";
 }
 
-.site-info{
+.site-info {
     padding: 0 8% 0 8%;
     height: auto;
 }
 
-.site-info nav{
+.site-info nav {
     padding: 7.6% 0 7.6% 0;
     display: none;
 }
 
-.site-info .secondary{
+.site-info .secondary {
     font-size: 15px;
     padding: 7.6% 0 15.2% 0;
     margin: 0;
 }
 
-.site-info p{
+.site-info p {
     padding: 0;
     margin: 0 0 24px 0;
 }
 
-
-.site-info ul{
+.site-info ul {
     margin: 0;
     padding: 0;
     list-style: none;
 }
 
-.site-info li{
+.site-info li {
     padding: 12px 0 12px 0;
     font-size: 15px;
 }
 
-.site-info h2{
+.site-info h2 {
     margin: 0 0 24px 0;
 }
 
-.site-info hr{
+.site-info hr {
     border: none;
-    height:2px;
+    height: 2px;
     background-color: #ffffff;
 }
-
 
 @media screen and (max-width: 43.75em) {
     .header-top {
         border-bottom: none;
         height: 0px;
     }
-    .main-navigation li{
+
+    .main-navigation li {
         border: none;
         display: none;
     }
-    .sidebar-toggle{
+
+    .sidebar-toggle {
         border-bottom: 2px solid #ffffff;
     }
 
-    article{
+    article {
         width: auto;
         padding: 7% 8% 7% 8%;
     }
 
-    article h2{
+    article h2 {
         font-size: 5.5vw;
     }
 
-    .content hr{
+    .content hr {
         width: 84%;
     }
-    
-    .site-info nav{
+
+    .site-info nav {
         display: block;
     }
 
-    .site-footer{
+    .site-footer {
         display: none;
     }
+
+    .nav-link {
+        border-bottom: none;
+    }
+
 }
