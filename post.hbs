@@ -12,9 +12,11 @@
     <div class="header-top">
         <nav class="main-navigation">
             <ul>
-                 {{#foreach @blog.navigation}}
+                {{#navigation}}
+                    {{#foreach navigation}}
                         <li><a href="{{url absolute="true"}}">{{label}}</a></li>
-                {{/foreach}}
+                    {{/foreach}}
+                {{/navigation}}
             </ul>
         </nav>
         <button class="sidebar-toggle" id="toggle-button">
@@ -31,44 +33,40 @@
         <h2>菜单</h2>
         <hr>
         <ul>
-            {{#foreach @blog.navigation}}
-                <li><a href="{{url absolute="true"}}">{{label}}</a></li>
-                <hr>
-            {{/foreach}}
+            {{#navigation}}
+                {{#foreach @blog.navigation}}
+                    <li><a href="{{url absolute="true"}}">{{label}}</a></li>
+                    <hr>
+                {{/foreach}}
+            {{/navigation}}
         </ul>
     </nav>
     <div class="secondary">
-        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aperiam fuga iure molestias omnis, perspiciatis
-            reprehenderit? Delectus dignissimos earum esse inventore perferendis quod temporibus voluptatibus. Hic
-            impedit
-            incidunt nisi nulla quis?
-        </p>
-        <p> Lorem ipsum dolor sit amet, consectetur adipisicing elit. A, accusantium eos ex fugiat illum non quaerat
-            quas velit voluptatem voluptatibus. Ad, fugit, rem? Illum inventore placeat quis, quisquam quo rerum.
+        <p>
+            嘻嘻 你好～
         </p>
     </div>
 </div>
 
 
-
 {{#post}}
-<div class="main-body" id="main-body">
-    <article>
-        <header>
-            <div class="entry-date">
+    <div class="main-body" id="main-body">
+        <article>
+            <header>
+                <div class="entry-date">
                 <span>
                     <a href="#">{{date format="YYYY年MM月DD日"}}</a>
                 </span>
+                </div>
+                <h1 class="entry-title">
+                    {{title}}
+                </h1>
+            </header>
+            <div class="entry-content">
+                {{content}}
             </div>
-            <h1 class="entry-title">
-                {{title}}
-            </h1>
-        </header>
-        <div class="entry-content">
-            {{content}}
-        </div>
-    </article>
-</div>
+        </article>
+    </div>
 {{/post}}
 </body>
 <script src="{{asset "js/main.js"}}"></script>

@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width" />
+    <meta name="viewport" content="width=device-width"/>
     <title>{{@blog.title}}</title>
     <link rel="stylesheet" href="{{asset "css/normalize.css"}}">
     <link rel="stylesheet" href="{{asset "css/main.css"}}">
@@ -12,48 +12,53 @@
 </style>
 
 <body>
-    <header>
-        <div class="header-top">
-            <nav class="main-navigation">
-                <ul>
-                    {{#foreach @blog.navigation}}
+<header>
+    <div class="header-top">
+        <nav class="main-navigation">
+            <ul>
+                {{#navigation}}
+                    {{#foreach navigation}}
                         <li><a href="{{url absolute="true"}}">{{label}}</a></li>
                     {{/foreach}}
-                </ul>
-            </nav>
-            <button class="sidebar-toggle" id="toggle-button">
-            &#xe767;
-        </button>
-        </div>
-        <div class="site-branding">
-            <a href="#">{{@blog.title}}</a>
-        </div>
-    </header>
-
-    <div class="site-info hidden-block" id="site-info">
-        <nav>
-            <h2>菜单</h2>
-            <hr>
-            <ul>
-                {{#foreach @blog.navigation}}
-                <li><a href="{{url absolute="true"}}">{{label}}</a></li>
-                <hr>
-                {{/foreach}}
+                {{/navigation}}
             </ul>
         </nav>
-        <div class="secondary">
-            <p>{{@blog.description}}
-            </p>
-            <p> Lorem ipsum dolor sit amet, consectetur adipisicing elit. A, accusantium eos ex fugiat illum non quaerat quas
-                velit voluptatem voluptatibus. Ad, fugit, rem? Illum inventore placeat quis, quisquam quo rerum.
-            </p>
-        </div>
+        <button class="sidebar-toggle" id="toggle-button">
+            &#xe767;
+        </button>
+    </div>
+    <div class="site-branding">
+        <a href="#">{{@blog.title}}</a>
+    </div>
+</header>
 
+<div class="site-info hidden-block" id="site-info">
+    <nav>
+        <h2>菜单</h2>
+        <hr>
+        <ul>
+            {{#navigation}}
+                {{#foreach navigation}}
+                    <li><a href="{{url absolute="true"}}">{{label}}</a></li>
+                    <hr>
+                {{/foreach}}
+            {{/navigation}}
+        </ul>
+    </nav>
+    <div class="secondary">
+        <p>{{@blog.description}}
+        </p>
+        <p> Lorem ipsum dolor sit amet, consectetur adipisicing elit. A, accusantium eos ex fugiat illum non quaerat
+            quas
+            velit voluptatem voluptatibus. Ad, fugit, rem? Illum inventore placeat quis, quisquam quo rerum.
+        </p>
     </div>
 
-    {{!--articles post --}}
-    <div class="content" id="articles">
-        {{#foreach posts}}
+</div>
+
+{{!--articles post --}}
+<div class="content" id="articles">
+    {{#foreach posts}}
         <article>
             <header>
                 <div class="entry-date">
@@ -63,36 +68,20 @@
             </header>
         </article>
         <hr> {{/foreach}}
+</div>
+
+
+<footer id="footer">
+    <div class="nav-link">
+        {{pagination}}
     </div>
 
-
-    <footer id="footer">
-        <div class="nav-link">
-            {{pagination}}
-            <!--
-                {{#if prev}}
-                <button class="previous-page">
-                    <a href="{{page_url prev}}">&#xe768;</a>
-                </button>
-                {{/if}}
-            
-                <span>第 {{page}} 页 &frasl; 共 {{pages}} 页</span>
-
-            {{#if next}}
-                <button class="next-page">
-                &#xe600;
-            {{/if}}
-            </button>
-            -->
-
-        </div>
-
-        <div class="site-footer">
+    <div class="site-footer">
             <span class="site-footer-info">
-                {{@blog.description}}        
+                {{@blog.description}}
             </span>
-        </div>
-    </footer>
+    </div>
+</footer>
 </body>
 <script src="{{asset "js/main.js"}}"></script>
 
