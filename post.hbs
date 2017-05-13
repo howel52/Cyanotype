@@ -3,18 +3,18 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width"/>
-    <title>Howel's House</title>
-    <link rel="stylesheet" href="css/normalize.css">
-    <link rel="stylesheet" href="css/main.css">
+    <title>{{meta_title}}</title>
+    <link rel="stylesheet" href="{{asset "css/normalize.css"}}">
+    <link rel="stylesheet" href="{{asset "css/main.css"}}">
 </head>
 <body>
 <header>
     <div class="header-top">
         <nav class="main-navigation">
             <ul>
-                <li><a href="#">Menu 1</a></li>
-                <li><a href="#">Menu 2</a></li>
-                <li><a href="#">Menu 3</a></li>
+                 {{#foreach @blog.navigation}}
+                        <li><a href="{{url absolute="true"}}">{{label}}</a></li>
+                {{/foreach}}
             </ul>
         </nav>
         <button class="sidebar-toggle" id="toggle-button">
@@ -22,7 +22,7 @@
         </button>
     </div>
     <div class="site-branding">
-        <a href="#">Howel's House</a>
+        <a href="#">{{@blog.title}}</a>
     </div>
 </header>
 
@@ -31,12 +31,10 @@
         <h2>菜单</h2>
         <hr>
         <ul>
-            <li><a href="#">Menu 1</a></li>
-            <hr>
-            <li><a href="#">Menu 2</a></li>
-            <hr>
-            <li><a href="#">Menu 3</a></li>
-            <hr>
+            {{#foreach @blog.navigation}}
+                <li><a href="{{url absolute="true"}}">{{label}}</a></li>
+                <hr>
+            {{/foreach}}
         </ul>
     </nav>
     <div class="secondary">
@@ -49,30 +47,30 @@
             quas velit voluptatem voluptatibus. Ad, fugit, rem? Illum inventore placeat quis, quisquam quo rerum.
         </p>
     </div>
-
 </div>
 
 
 
-
-
+{{#post}}
 <div class="main-body" id="main-body">
     <article>
         <header>
             <div class="entry-date">
                 <span>
-                    <a href="#">2017 年 5 月 3 日</a>
+                    <a href="#">{{date format="YYYY年MM月DD日"}}</a>
                 </span>
             </div>
             <h1 class="entry-title">
-                #34: 微信赞赏、 Airpods 和 BeatsX
+                {{title}}
             </h1>
         </header>
         <div class="entry-content">
-            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquam culpa cumque deserunt dicta dolore ea facere illum incidunt, maiores numquam pariatur quaerat, quisquam rerum ullam voluptatibus? Atque hic laborum quod?
+            {{content}}
         </div>
     </article>
 </div>
+{{/post}}
 </body>
-<script src="js/main.js"></script>
+<script src="{{asset "js/main.js"}}"></script>
 </html>
+
