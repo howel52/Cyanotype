@@ -101,6 +101,8 @@ button:focus {
     border-bottom: 2px solid #ffffff;
 }
 
+
+
 .entry-title {
     display: inline-block;
 }
@@ -132,6 +134,10 @@ article h2:hover, article span:hover {
     width: 65%;
     height: 2px;
     background-color: #ffffff;
+}
+
+.content hr:last-child{
+    display:none ;
 }
 
 .nav-link {
