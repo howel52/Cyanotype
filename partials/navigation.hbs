@@ -2,9 +2,9 @@
     <div class="header-top">
         <nav class="main-navigation">
             <ul>
-                    {{#foreach navigation}}
-                        <li><a href="{{url absolute="true"}}">{{label}}</a></li>
-                    {{/foreach}}
+                {{#foreach navigation}}
+                    <li><a href="{{url absolute="true"}}">{{label}}</a></li>
+                {{/foreach}}
             </ul>
         </nav>
         <button class="sidebar-toggle" id="toggle-button">
@@ -21,10 +21,10 @@
         <h2>菜单</h2>
         <hr>
         <ul>
-                {{#foreach navigation}}
-                    <li><a href="{{url absolute="true"}}">{{label}}</a></li>
-                    <hr>
-                {{/foreach}}
+            {{#foreach navigation}}
+                <li><a href="{{url absolute="true"}}">{{label}}</a></li>
+                <hr>
+            {{/foreach}}
         </ul>
     </nav>
     <div class="secondary">
