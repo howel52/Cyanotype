@@ -260,6 +260,9 @@ article h2:hover, article span:hover {
     font-size: 4vw;
 }
 
+.main-body article img{
+    width: 100%;
+}
 
 
 
