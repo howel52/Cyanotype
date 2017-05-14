@@ -260,8 +260,19 @@ article h2:hover, article span:hover {
     font-size: 4vw;
 }
 
-.main-body article img{
+.main-body .entry-content img{
     width: 100%;
+}
+
+.main-body .entry-content pre{
+    overflow-x: auto;
+    width: 100%;
+}
+
+.main-body .entry-content blockquote{
+    background-color: #c93017;
+    margin: 0;
+    padding: 16px 40px 16px 40px;
 }
 
 

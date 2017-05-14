@@ -6,6 +6,7 @@
     <title>{{meta_title}}</title>
     <link rel="stylesheet" href="{{asset "css/normalize.css"}}">
     <link rel="stylesheet" href="{{asset "css/main.css"}}">
+
 </head>
 <body>
 {{navigation}}
@@ -29,8 +30,12 @@
         </article>
     </div>
 {{/post}}
-
-</body>
 <script src="{{asset "js/main.js"}}"></script>
+<script src="https://cdn.bootcss.com/highlight.js/9.11.0/highlight.min.js"></script>
+<script>
+    hljs.initHighlightingOnLoad();
+</script>
+<link href="https://cdn.bootcss.com/highlight.js/9.11.0/styles/ocean.min.css" rel="stylesheet">
+</body>
 </html>
 
