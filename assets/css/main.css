@@ -145,7 +145,7 @@ article h2:hover, article span:hover {
     line-height: 64px;
 }
 
-.nav-link a{
+.nav-link a {
     font-family: iconfont;
     height: 64px;
 }
@@ -181,7 +181,6 @@ article h2:hover, article span:hover {
     float: left;
     cursor: pointer;
 }
-
 
 .nav-link .page-number {
     display: inline-block;
@@ -236,46 +235,53 @@ article h2:hover, article span:hover {
     background-color: #ffffff;
 }
 
-
 /*post */
-.main-body{
+.main-body {
     padding: 8%;
 }
 
-.main-body article{
+.main-body article {
     width: 100%;
     padding: 0;
     margin: 0;
 }
 
-.main-body header{
+.main-body header {
     margin-bottom: 8%;
     padding: 0;
 }
 
-.main-body h1{
+.main-body h1 {
     padding: 0;
     margin: 10px 0 0 0;
     width: 100%;
-    font-size: 4vw;
+    font-size: 4.8vw;
 }
 
-.main-body .entry-content img{
+.main-body .entry-content img {
     width: 100%;
 }
 
-.main-body .entry-content pre{
+.main-body .entry-content pre {
     overflow-x: auto;
     width: 100%;
+    font-size: smaller;
 }
 
-.main-body .entry-content blockquote{
+.main-body .entry-content pre span:hover{
+    text-decoration: no-underline;
+}
+
+.main-body .entry-content blockquote {
     background-color: #c93017;
-    margin: 0;
+    margin: 0 0 32px 0;
     padding: 16px 40px 16px 40px;
 }
 
-
+.main-body .entry-content *{
+    margin-bottom: 32px;
+    line-height: 1.6;
+}
 
 @media screen and (max-width: 43.75em) {
     .header-top {
