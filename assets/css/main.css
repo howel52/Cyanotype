@@ -268,10 +268,6 @@ article h2:hover, article span:hover {
     font-size: smaller;
 }
 
-.main-body .entry-content pre span:hover{
-    text-decoration: no-underline;
-}
-
 .main-body .entry-content blockquote {
     background-color: #c93017;
     margin: 0 0 32px 0;
