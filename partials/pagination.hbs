@@ -1,12 +1,12 @@
 {{#if prev}}
-    <button class="previous-page">
+    <div class="previous-page">
         <a href="{{page_url prev}}">&#xe768;</a>
-    </button> 
+    </div>
 {{/if}}
 
 <span>第 {{page}} 页 &frasl; 共 {{pages}} 页</span> 
 {{#if next}}
-    <button class="next-page">
+    <div class="next-page">
         <a href="{{page_url next}}">&#xe600;</a>        
-    </button>
+    </div>
 {{/if}}
