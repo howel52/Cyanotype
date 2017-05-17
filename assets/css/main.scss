@@ -73,7 +73,7 @@ body {
 
 
 @media screen and (min-width: 43.75em) {
-  .sidebar-toggle:hover {
+  .sidebar-toggle:hover,.next-page:hover,.previous-page:hover {
     background-color: #ffffff;
     color: #c93d10;
     cursor: pointer;
