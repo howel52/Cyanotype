@@ -226,6 +226,7 @@ article {
     display: none; }
 
   .sidebar-toggle {
+    cursor: pointer;
     border-bottom: 2px solid #ffffff; }
 
   article {
