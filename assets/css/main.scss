@@ -27,7 +27,7 @@ body {
   position: relative;
   border-bottom: #ffffff 2px solid;
   height: 50px;
-  .sidebar-toggle{
+  .sidebar-toggle {
     text-align: center;
   }
 }
@@ -70,13 +70,14 @@ body {
 
 }
 
-
-
 @media screen and (min-width: 43.75em) {
-  .sidebar-toggle:hover,.next-page:hover,.previous-page:hover {
+  .sidebar-toggle:hover, .next-page:hover, .previous-page:hover {
     background-color: #ffffff;
     color: #c93d10;
     cursor: pointer;
+    a {
+      color: #c93d10;
+    }
   }
 }
 
